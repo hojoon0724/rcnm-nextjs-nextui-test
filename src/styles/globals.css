@@ -3,10 +3,37 @@
 @tailwind utilities;
 
 :root {
-  --black-hex-0: #101823;
-  --blue-hex-0: #0b3d91;
-  --red-hex-0: #fc3d21;
-  --white-hex-0: #e1dbd3;
+  --white-hex-3: #fffffc;
+  --white-hex-2: #fcf8f0;
+  --white-hex-1: #eee9e2;
+  --white-hex: #e1dbd3;
+  --white1-hex: #d2cdc6;
+  --white2-hex: #c4bfb8;
+  --white3-hex: #b5b2ac;
+
+  --blue-hex-3: #3b60ba;
+  --blue-hex-2: #2d54ac;
+  --blue-hex-1: #20489e;
+  --blue-hex: #0b3d91;
+  --blue1-hex: #003284;
+  --blue2-hex: #002777;
+  --blue3-hex: #001d6a;
+
+  --red-hex-3: #ff6c47;
+  --red-hex-2: #ff5d3a;
+  --red-hex-1: #ff4e2e;
+  --red-hex: #fc3d21;
+  --red1-hex: #e92b15;
+  --red2-hex: #d91207;
+  --red3-hex: #c80000;
+
+  --black-hex-3: #36414f;
+  --black-hex-2: #2b3643;
+  --black-hex-1: #202b38;
+  --black-hex: #101823;
+  --black1-hex: #08101e;
+  --black2-hex: #000918;
+  --black3-hex: #000000;
 
   --hue-black: 214.7;
   --sat-black: 37.25%;
@@ -45,7 +72,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'futura-pt', sans-serif;
   min-height: 100vh;
   margin: 0 auto;
 }
@@ -57,6 +84,18 @@ body {
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-2xl;
+  }
+  h2 {
+    @apply text-xl;
+  }
+  h3 {
+    @apply text-lg;
   }
 }
 
@@ -82,22 +121,22 @@ body {
 }
 
 .var-bg-hex-black {
-  background-color: var(--black-hex-0);
+  background-color: var(--black-hex);
   height: 100px;
   width: 200px;
 }
 .var-bg-hex-blue {
-  background-color: var(--blue-hex-0);
+  background-color: var(--blue-hex);
   height: 100px;
   width: 200px;
 }
 .var-bg-hex-red {
-  background-color: var(--red-hex-0);
+  background-color: var(--red-hex);
   height: 100px;
   width: 200px;
 }
 .var-bg-hex-white {
-  background-color: var(--white-hex-0);
+  background-color: var(--white-hex);
   height: 100px;
   width: 200px;
 }
