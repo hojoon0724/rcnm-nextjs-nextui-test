@@ -3,14 +3,42 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --black-hex-0: #101823;
+  --blue-hex-0: #0b3d91;
+  --red-hex-0: #fc3d21;
+  --white-hex-0: #e1dbd3;
+
+  --hue-black: 214.7;
+  --sat-black: 37.25%;
+  --lum-black: 10%;
+  --hsl-black-base: hsl(var(--hue-black), var(--sat-black), var(--lum-black));
+
+  --hue-blue: 217.6;
+  --sat-blue: 86%;
+  --lum-blue: 30.5%;
+  --hsl-blue-base: hsl(var(--hue-blue), var(--sat-blue), var(--lum-blue));
+
+  --hue-red: 7.7;
+  --sat-red: 97%;
+  --lum-red: 55%;
+  --hsl-red-base: hsl(var(--hue-red), var(--sat-red), var(--lum-red));
+
+  --hue-white: 34.5;
+  --sat-white: 18.9%;
+  --lum-white: 85.5%;
+  --hsl-white-base: hsl(var(--hue-white), var(--sat-white), var(--lum-white));
+
+  --base-hue: 230;
+  --base-sat: 10%;
+
+  --background: hsl(var(--base-hue), var(--base-sat), 95%);
+  --foreground: hsl(var(--base-hue), var(--base-sat), 3%);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: hsl(var(--base-hue), var(--base-sat), 3%);
+    --foreground: hsl(var(--base-hue), var(--base-sat), 99%);
   }
 }
 
@@ -18,10 +46,175 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  margin: 0 auto;
+}
+
+.full {
+  width: 100%;
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
+}
+
+.var-bg-black {
+  background-color: var(--hsl-black-base);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-blue {
+  background-color: var(--hsl-blue-base);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-red {
+  background-color: var(--hsl-red-base);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-white {
+  background-color: var(--hsl-white-base);
+  height: 100px;
+  width: 200px;
+}
+
+.var-bg-hex-black {
+  background-color: var(--black-hex-0);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-hex-blue {
+  background-color: var(--blue-hex-0);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-hex-red {
+  background-color: var(--red-hex-0);
+  height: 100px;
+  width: 200px;
+}
+.var-bg-hex-white {
+  background-color: var(--white-hex-0);
+  height: 100px;
+  width: 200px;
+}
+
+.swatch {
+  width: 100px;
+  height: 100px;
+}
+
+.black-swatch-100 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 18%);
+}
+.black-swatch-200 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 16%);
+}
+.black-swatch-300 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 14%);
+}
+.black-swatch-400 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 12%);
+}
+.black-swatch-500 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 10%);
+}
+.black-swatch-600 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 8%);
+}
+.black-swatch-700 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 6%);
+}
+.black-swatch-800 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 4%);
+}
+.black-swatch-900 {
+  background-color: hsl(var(--hue-black), var(--sat-black), 2%);
+}
+
+.blue-swatch-100 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 38.5%);
+}
+.blue-swatch-200 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 36.5%);
+}
+.blue-swatch-300 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 34.5%);
+}
+.blue-swatch-400 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 32.5%);
+}
+.blue-swatch-500 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 30.5%);
+}
+.blue-swatch-600 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 28.5%);
+}
+.blue-swatch-700 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 26.5%);
+}
+.blue-swatch-800 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 24.5%);
+}
+.blue-swatch-900 {
+  background-color: hsl(var(--hue-blue), var(--sat-blue), 22.5%);
+}
+
+.red-swatch-100 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 71%);
+}
+.red-swatch-200 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 67%);
+}
+.red-swatch-300 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 63%);
+}
+.red-swatch-400 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 59%);
+}
+.red-swatch-500 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 55%);
+}
+.red-swatch-600 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 51%);
+}
+.red-swatch-700 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 47%);
+}
+.red-swatch-800 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 43%);
+}
+.red-swatch-900 {
+  background-color: hsl(var(--hue-red), var(--sat-red), 39%);
+}
+
+.white-swatch-100 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 100%);
+}
+.white-swatch-200 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 97.5%);
+}
+.white-swatch-300 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 93.5%);
+}
+.white-swatch-400 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 89.5%);
+}
+.white-swatch-500 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 85.5%);
+}
+.white-swatch-600 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 81.5%);
+}
+.white-swatch-700 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 77.5%);
+}
+.white-swatch-800 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 73.5%);
+}
+.white-swatch-900 {
+  background-color: hsl(var(--hue-white), var(--sat-white), 69.5%);
 }

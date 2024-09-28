@@ -35,15 +35,40 @@ events[1][0] <- index = one event
 
 */
 
-export const events = [
+export const allEvents = [
   [
     {
       eventCode: 's00e00s0',
-      title: '',
-      eventStageType: '',
+      title: 'Event Title',
+      eventStageType: 'Stage II',
       datetime: '2024-03-21T19:30:00-05:00',
-      venue: '',
-      blurb: ``,
+      venue: 'Stovehouse',
+      blurb: `blah blah blah blah`,
+      tickets: {
+        urlExists: false,
+        url: '',
+      },
+      artists: [],
+      program: [
+        {
+          composerName: '',
+          workTitle: '',
+          workSubtitle: '',
+          compositionYear: '2024',
+          isPremiere: false,
+          performers: [],
+        },
+      ],
+      intermissionAfterIndex: -1,
+      colorTheme: '',
+    },
+    {
+      eventCode: 's00e00s0',
+      title: 'Different Title',
+      eventStageType: 'Donor Event',
+      datetime: '2024-03-21T19:30:00-05:00',
+      venue: 'Stovehouse',
+      blurb: `blah blah blah blah`,
       tickets: {
         urlExists: false,
         url: '',
