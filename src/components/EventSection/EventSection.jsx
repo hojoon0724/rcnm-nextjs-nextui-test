@@ -47,7 +47,7 @@ export default function EventSection({ theEvent }) {
           <div className="eventVenue uppercase">{theEvent.venue}</div>
         </div>
         <hr />
-        <div className="title uppercase text-4xl">{theEvent.title}</div>
+        <div className="title uppercase text-4xl py-3">{theEvent.title}</div>
         <BlurbText paragraph={theEvent.blurb} />
       </div>
     </section>

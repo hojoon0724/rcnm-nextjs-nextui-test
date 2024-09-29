@@ -79,8 +79,29 @@ body {
   margin: 0 auto;
 }
 
+section {
+  margin: 0 auto;
+}
+
+.width1200 {
+  max-width: 1200px;
+}
+
+@media only screen and (max-width: 1208px) {
+  section {
+    margin: 8px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .eventDateTimeVenueContainer {
+    flex-direction: column;
+  }
+}
+
 p {
   letter-spacing: 0.05rem;
+  text-align: justify;
 }
 
 .full {
@@ -95,10 +116,10 @@ p {
 
 @layer base {
   h1 {
-    @apply text-2xl;
+    @apply text-3xl;
   }
   h2 {
-    @apply text-xl;
+    @apply text-2xl;
   }
   h3 {
     @apply text-lg;

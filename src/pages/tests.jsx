@@ -9,11 +9,13 @@ export default function tests() {
   console.log(allEvents[0][0][0]);
 
   return (
-    <section>
+    <>
       <ColorTest />
-      {allEvents.map(season =>
-        season.map(half => half.map(theEvent => <EventSection theEvent={theEvent} key={theEvent.eventCode} />)),
-      )}
-    </section>
+      <section className="width1200">
+        {allEvents.map(season =>
+          season.map(half => half.map(theEvent => <EventSection theEvent={theEvent} key={theEvent.eventCode} />)),
+        )}
+      </section>
+    </>
   );
 }
