@@ -73,8 +73,14 @@ body {
   color: var(--foreground);
   background: var(--background);
   font-family: 'futura-pt', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
   min-height: 100vh;
   margin: 0 auto;
+}
+
+p {
+  letter-spacing: 0.05rem;
 }
 
 .full {

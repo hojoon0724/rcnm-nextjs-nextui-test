@@ -1,4 +1,5 @@
 import { BlurbText } from './subcomponents/BlurbText';
+import { formatInTimeZone } from 'date-fns-tz';
 
 /* 
 data in = object
@@ -34,10 +35,21 @@ data in = object
 
 */
 
-export function EventSection({ theEvent }) {
+export default function EventSection({ theEvent }) {
+  const datetime = new Date(theEvent.datetime);
+  const timezone = 'America/Chicago';
+
   return (
-    <div className="theEventContainer" key={theEvent.eventCode}>
-      <BlurbText paragraph={theEvent.blurb} />
-    </div>
+    <section className="py-10">
+      <div className="theEventContainer" key={theEvent.eventCode}>
+        <div className="eventDateTimeVenueContainer flex flex-row justify-between py-3 text-small">
+          <div className="eventDate uppercase">{formatInTimeZone(datetime, timezone, 'EEEE - MM/dd/yyyy - HH:mm')}</div>
+          <div className="eventVenue uppercase">{theEvent.venue}</div>
+        </div>
+        <hr />
+        <div className="title uppercase text-4xl">{theEvent.title}</div>
+        <BlurbText paragraph={theEvent.blurb} />
+      </div>
+    </section>
   );
 }
