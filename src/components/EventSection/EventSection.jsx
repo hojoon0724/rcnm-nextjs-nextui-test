@@ -1,5 +1,6 @@
 import { BlurbText } from './subcomponents/BlurbText';
 import { formatInTimeZone } from 'date-fns-tz';
+import ProgramList from './subcomponents/ProgramList';
 
 /* 
 data in = object
@@ -49,6 +50,7 @@ export default function EventSection({ theEvent }) {
         <hr />
         <div className="title uppercase text-4xl py-3">{theEvent.title}</div>
         <BlurbText paragraph={theEvent.blurb} />
+        <ProgramList programArr={theEvent.program} />
       </div>
     </section>
   );

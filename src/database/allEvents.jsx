@@ -151,16 +151,7 @@ export const allEvents = [
           url: ``,
         },
         artists: [],
-        program: [
-          {
-            composerName: ``,
-            workTitle: ``,
-            workSubtitle: ``,
-            compositionYear: '',
-            isPremiere: false,
-            performers: [],
-          },
-        ],
+        program: [],
         intermissionAfterIndex: -1,
       },
       {
@@ -181,16 +172,7 @@ export const allEvents = [
           url: ``,
         },
         artists: [],
-        program: [
-          {
-            composerName: ``,
-            workTitle: ``,
-            workSubtitle: ``,
-            compositionYear: '',
-            isPremiere: false,
-            performers: [],
-          },
-        ],
+        program: [],
         intermissionAfterIndex: -1,
       },
     ],
@@ -234,16 +216,7 @@ export const allEvents = [
           url: ``,
         },
         artists: [],
-        program: [
-          {
-            composerName: ``,
-            workTitle: ``,
-            workSubtitle: ``,
-            compositionYear: '',
-            isPremiere: false,
-            performers: [],
-          },
-        ],
+        program: [],
         intermissionAfterIndex: -1,
       },
       {
@@ -286,16 +259,7 @@ export const allEvents = [
           url: ``,
         },
         artists: [],
-        program: [
-          {
-            composerName: ``,
-            workTitle: ``,
-            workSubtitle: ``,
-            compositionYear: '',
-            isPremiere: false,
-            performers: [],
-          },
-        ],
+        program: [],
         intermissionAfterIndex: -1,
       },
     ],
