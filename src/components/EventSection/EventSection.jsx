@@ -1,6 +1,7 @@
 import { BlurbText } from './subcomponents/BlurbText';
 import { formatInTimeZone } from 'date-fns-tz';
 import ProgramList from './subcomponents/ProgramList';
+import Image from 'next/image';
 
 /* 
 data in = object
@@ -39,6 +40,7 @@ data in = object
 export default function EventSection({ theEvent }) {
   const datetime = new Date(theEvent.datetime);
   const timezone = 'America/Chicago';
+  theEvent.title.url === '' ? console.log(theEvent.title) : console.log(theEvent.title.url);
 
   return (
     <section className="py-10">
@@ -48,7 +50,13 @@ export default function EventSection({ theEvent }) {
           <div className="eventVenue uppercase">{theEvent.venue}</div>
         </div>
         <hr />
-        <div className="title uppercase text-4xl py-3">{theEvent.title}</div>
+        {theEvent.title.url !== '' ? (
+          <div className="eventTitleBannerPngContainer">
+            <Image src={theEvent.title.url} alt={theEvent.title.text} width={2150} height={849} />
+          </div>
+        ) : (
+          <div className="title uppercase text-4xl py-3">{theEvent.title.text}</div>
+        )}
         <BlurbText paragraph={theEvent.blurb} />
         <ProgramList programArr={theEvent.program} />
       </div>

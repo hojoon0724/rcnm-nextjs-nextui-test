@@ -11,11 +11,16 @@ events[1][0][0] <- index = event
 
 {
   eventCode: 's00e00s0',
-  banner: {
+  theme: {
+  background: 'dark',
+  text: 'white',
+  accent: 'red',}
+  banner: {,
     useBanner: false,
     url:``
   },
-  title: ``,
+  title: { ``,
+  },
   eventStageType: '',
   datetime: '2024-03-21T19:30:00-05:00',
   venue: '',
@@ -45,11 +50,19 @@ export const allEvents = [
     [
       {
         eventCode: 's00e01s2',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: false,
           url: ``,
         },
-        title: 'A Small Step',
+        title: {
+          text: 'A Small Step',
+          url: ``,
+        },
         eventStageType: 'Stage II',
         datetime: '2021-11-06T20:00:00-05:00',
         venue: 'avilution',
@@ -134,11 +147,19 @@ export const allEvents = [
     [
       {
         eventCode: 's01e01s1',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: false,
           url: ``,
         },
-        title: 'neo',
+        title: {
+          text: 'neo',
+          url: '/assets/eventBanners/s01/s00e01s1-title.png',
+        },
         eventStageType: 'stage i',
         datetime: '2022-06-16T19:30:00-05:00',
         venue: 'five points recording studio',
@@ -156,11 +177,19 @@ export const allEvents = [
       },
       {
         eventCode: 's01e02s2',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: false,
           url: ``,
         },
-        title: 'struck',
+        title: {
+          text: 'struck',
+          url: ``,
+        },
         eventStageType: 'stage ii',
         datetime: '2022-09-08T19:30:00-05:00',
         venue: 'Stovehouse',
@@ -179,11 +208,19 @@ export const allEvents = [
     [
       {
         eventCode: 's01e03s1',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: true,
           url: ``,
         },
-        title: 'ground station: chris p. thompson',
+        title: {
+          text: 'ground station: chris p. thompson',
+          url: ``,
+        },
         eventStageType: 'stage i',
         datetime: '2022-10-03T18:00:00-05:00',
         venue: 'UAH - Black Box Theater',
@@ -200,11 +237,19 @@ export const allEvents = [
       },
       {
         eventCode: 's01e03s2',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: false,
           url: ``,
         },
-        title: 'outside the box',
+        title: {
+          text: 'outside the box',
+          url: ``,
+        },
         eventStageType: 'stage ii',
         datetime: '2022-09-08T19:30:00-05:00',
         venue: 'UAH - Black Box Theater',
@@ -221,11 +266,19 @@ export const allEvents = [
       },
       {
         eventCode: 's01e04s1',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: true,
           url: ``,
         },
-        title: 'happy hour salon with: hsuan-fong chen',
+        title: {
+          text: 'happy hour salon with: hsuan-fong chen',
+          url: ``,
+        },
         eventStageType: 'stage i',
         datetime: '2022-10-04T19:30:00-05:00',
         venue: 'Private Residence',
@@ -243,11 +296,19 @@ export const allEvents = [
       },
       {
         eventCode: 's01e04s2',
+        theme: {
+          background: 'dark',
+          text: 'white',
+          accent: 'red',
+        },
         banner: {
           useBanner: false,
           url: ``,
         },
-        title: 'p=mv',
+        title: {
+          text: 'p=mv',
+          url: ``,
+        },
         eventStageType: 'stage ii',
         datetime: '2022-12-17T19:30:00-05:00',
         venue: 'UAH - Black Box Theater',

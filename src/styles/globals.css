@@ -87,6 +87,11 @@ section {
   max-width: 1200px;
 }
 
+.eventTitleBannerPngContainer img {
+  max-height: 10rem;
+  width: auto;
+}
+
 @media only screen and (max-width: 1208px) {
   section {
     margin: 8px;
