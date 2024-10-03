@@ -2,6 +2,7 @@ import { ColorTest } from '@/components/ColorTest';
 import EventSection from '@/components/EventSection/EventSection';
 import { allEvents } from '@/database/allEvents';
 import ProgramList from '@/components/EventSection/subcomponents/ProgramList';
+import ContentComponent from '@/components/EventSection/ParagraphTest';
 
 export default function tests() {
   const season0 = allEvents[0];
@@ -12,6 +13,7 @@ export default function tests() {
   return (
     <>
       <ColorTest />
+      <ContentComponent />
       <ProgramList />
       <section className="width1200">
         {allEvents.map(season =>

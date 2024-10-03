@@ -45,23 +45,27 @@ export default function EventSection({ theEvent }) {
   theEvent.title.url === '' ? console.log(theEvent.title) : console.log(theEvent.title.url);
 
   return (
-    <section className="py-10" style={{ backgroundColor: pageTheme.background }}>
-      <div className="theEventContainer" key={theEvent.eventCode}>
-        <div className="eventDateTimeVenueContainer flex flex-row justify-between py-3 text-small">
-          <div className="eventDate uppercase">{formatInTimeZone(datetime, timezone, 'EEEE - MM/dd/yyyy - HH:mm')}</div>
-          <div className="eventVenue uppercase">{theEvent.venue}</div>
-        </div>
-        <hr />
-        {theEvent.title.url !== '' ? (
-          <div className="eventTitleBannerPngContainer">
-            <Image src={theEvent.title.url} alt={theEvent.title.text} width={2150} height={849} />
+    <>
+      <section className="py-10" style={{ backgroundColor: pageTheme.background }}>
+        <div className="theEventContainer" key={theEvent.eventCode}>
+          <div className="eventDateTimeVenueContainer flex flex-row justify-between py-3 text-small">
+            <div className="eventDate uppercase">
+              {formatInTimeZone(datetime, timezone, 'EEEE - MM/dd/yyyy - HH:mm')}
+            </div>
+            <div className="eventVenue uppercase">{theEvent.venue}</div>
           </div>
-        ) : (
-          <div className="title uppercase text-4xl py-3">{theEvent.title.text}</div>
-        )}
-        <BlurbText paragraph={theEvent.blurb} />
-        <ProgramList programArr={theEvent.program} />
-      </div>
-    </section>
+          <hr />
+          {theEvent.title.url !== '' ? (
+            <div className="eventTitleBannerPngContainer">
+              <Image src={theEvent.title.url} alt={theEvent.title.text} width={2150} height={849} />
+            </div>
+          ) : (
+            <div className="title uppercase text-4xl py-3">{theEvent.title.text}</div>
+          )}
+          <BlurbText paragraph={theEvent.blurb} />
+          <ProgramList programArr={theEvent.program} />
+        </div>
+      </section>
+    </>
   );
 }
