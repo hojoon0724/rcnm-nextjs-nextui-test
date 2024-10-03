@@ -40,10 +40,12 @@ data in = object
 export default function EventSection({ theEvent }) {
   const datetime = new Date(theEvent.datetime);
   const timezone = 'America/Chicago';
+  const pageTheme = theEvent.theme;
+
   theEvent.title.url === '' ? console.log(theEvent.title) : console.log(theEvent.title.url);
 
   return (
-    <section className="py-10">
+    <section className="py-10" style={{ backgroundColor: pageTheme.background }}>
       <div className="theEventContainer" key={theEvent.eventCode}>
         <div className="eventDateTimeVenueContainer flex flex-row justify-between py-3 text-small">
           <div className="eventDate uppercase">{formatInTimeZone(datetime, timezone, 'EEEE - MM/dd/yyyy - HH:mm')}</div>

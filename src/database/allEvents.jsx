@@ -148,7 +148,7 @@ export const allEvents = [
       {
         eventCode: 's01e01s1',
         theme: {
-          background: 'dark',
+          background: 'red',
           text: 'white',
           accent: 'red',
         },
